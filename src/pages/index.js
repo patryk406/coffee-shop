@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import BackgroundSection from "../global/BackgroundSection"
 import Info from "../global/home/Info"
 import Menu from "../global/home/Menu"
+import Product from "../global/home/Product"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => (
     />
     <Info />
     <Menu items={data.menu} />
+    <Product />
   </Layout>
 )
 
