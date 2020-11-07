@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "../Title"
-import { StaticQuery, graphQl } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 const getProducts = graphql`
   {
@@ -45,7 +45,12 @@ export default function Product() {
                           <h6>${products.price}</h6>
                           <button
                             type="button"
-                            className="btn btn-yellow mt-3 text-capitalize"
+                            className="btn btn-yellow mt-3 text-capitalize snipcart-add-item"
+                            data-item-id={products.id}
+                            data-item-price={products.price}
+                            data-item-url="https://coffee-lovers-site.netlify.app/"
+                            data-item-image={products.image.fluid.src}
+                            data-item-name={products.title}
                           >
                             Add to cart
                           </button>

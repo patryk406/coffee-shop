@@ -23,6 +23,13 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: process.env.SNIPCART_API,
+        autopop: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
