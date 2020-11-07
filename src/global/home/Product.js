@@ -13,7 +13,7 @@ const getProducts = graphql`
           image {
             fluid(maxHeight: 230) {
               src
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
